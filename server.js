@@ -12,14 +12,14 @@ app.get('/', function (req,res){
 })
 
 const personRoutes = require('./routes/personRoutes');
-app.use('/person',personRoutes);
-
 const menuItem = require('./routes/menuItemRoutes');
+
+app.use('/person',personRoutes);
 app.use('/menuItem',menuItem);
 
 
 
-app.listen(PORT,()=>{
+app.listen(PORT, ()=>{
     console.log('listening on port 3100');
 })
 
